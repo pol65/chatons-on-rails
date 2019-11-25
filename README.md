@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Polo a écrit un truc lol, bon conflit ;)
