@@ -8,8 +8,10 @@
 require 'faker'
 
 Item.destroy_all
+#User.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!('items')
+#ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
 n = 0
 
@@ -23,5 +25,15 @@ items = []
         image_url: Faker::Internet.url
     )
 end
+
+#users = []
+#20.times do
+#    n = n+1
+#    users << User.create(
+#        first_name: Faker::Name.first_name,
+#        last_name: Faker::Name.last_name,
+#        email: "chatononrails#{n}@yopmail.com",
+#
+#    )
 
 puts "********** Seed done. **********"
