@@ -166,82 +166,24 @@
 				<h2>Related Products</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-5.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
+
+		<% @items.each do |item|%>
+			<div class="col">
+				<div class="col-md-3">
+					<div class="product-item">
+						<div class="product-thumb">
+							<img src="<%= item.image_url %>">
+						</div>
+						<div class="product-content">
+							<h4><a href="<%= item_path(item.id)%>"><%= item.title%></a></h4>
+							<p class="price"><%= item.price%>0 €</p>
+							
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-2.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-3.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Bradley Mid</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
+		<% end %>
+		
 	</div>
 </section>
 
