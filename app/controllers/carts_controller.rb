@@ -9,7 +9,7 @@ before_action :require_login
   end
   
   def index
+    
   end
-  def show
-  end
+
 end
