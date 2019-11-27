@@ -41,75 +41,6 @@
 </head>
 
 <body id="body">
-<!-- Start Top Header Bar -->
-<section class="top-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-xs-12 col-sm-4">
-				<div class="contact-number">
-					<i class="tf-ion-ios-telephone"></i>
-					<span>0699109398</span>
-				</div>
-			</div>
-			<div class="col-md-4 col-xs-12 col-sm-4">
-				<!-- Site Logo -->
-				<div class="logo text-center">
-					<h1 href="<%= root_path %>"> BicraveDeChatons.com </h1>
-				</div>
-			</div>
-			<div class="col-md-4 col-xs-12 col-sm-4">
-			<!-- Cart -->
-			<ul class="top-menu text-right list-inline">
-	          <li class="dropdown cart-nav dropdown-slide">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
-	            <div class="dropdown-menu cart-dropdown">
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart-1.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-	            	</div><!-- / Cart Item -->
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart-1.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-	            	</div><!-- / Cart Item -->
-	            	
-	            	<div class="cart-summary">
-                        <span>Total</span>
-                        <span class="total-price">$1799.00</span>
-                    </div>
-                    <ul class="text-center cart-buttons">
-                    	<li><a href="" class="btn btn-small">View Cart</a></li>
-                    	<li><a href="" class="btn btn-small btn-solid-border">Checkout</a></li>
-                    </ul>
-                </div>
-
-	          </li><!-- / Cart -->
-
-	        </ul><!-- / .nav .navbar-nav .navbar-right -->
-			</div>
-		</div>
-	</div>
-</section><!-- End Top Header Bar -->
-
 <section class="single-product">
 	<div class="container">
 		<div class="row mt-20">
@@ -166,82 +97,24 @@
 				<h2>Related Products</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-5.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
+
+		<% @items.each do |item|%>
+			<div class="col">
+				<div class="col-md-3">
+					<div class="product-item">
+						<div class="product-thumb">
+							<img src="<%= item.image_url %>">
+						</div>
+						<div class="product-content">
+							<h4><a href="<%= item_path(item.id)%>"><%= item.title%></a></h4>
+							<p class="price"><%= item.price%>0 €</p>
+							
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-2.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-3.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Bradley Mid</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
+		<% end %>
+		
 	</div>
 </section>
 
