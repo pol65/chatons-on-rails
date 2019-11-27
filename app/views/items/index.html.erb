@@ -26,26 +26,24 @@
 				<h2>Nos photos de chatons super bg</h2>
 			</div>
 		</div>
-		<% @items.each do |item|%>
-		<div class="row">
+
+<% @items.each do |item|%>
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
+						<img class="img-responsive" src="<%= item.image_url %>" alt="product-img">
 
-						 <img src="<%= item.image_url %>"> 
 						<div class="preview-meta">
 							<ul>
 								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
+									<a href=""><i class="tf-ion-android-cart">Ajouter au panier</i></a>
 								</li>
 							</ul>
                       	</div>
 					</div>
 					<div class="product-content">
 						<h4><a href="<%= item_path(item.id)%>"><%= item.title%></a></h4>
-						<p><%= item.description %></p>
 						<p class="price"><%= item.price%>€</p>
-						
 					</div>
 				</div>
 			</div>
