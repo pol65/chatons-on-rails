@@ -18,7 +18,7 @@
 							<!-- me art lab slider -->
 							<div class='carousel-inner '>
 								<div class='item active'>
-                                <a> <%= @item.image_url %> </a>
+                                <img class="img-responsive" src="<%= @item.image_url %>" alt="product-img">
 								</div>
 								
 							</div>
@@ -42,7 +42,7 @@
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">
-							<input id="product-quantity" type="text" value="1" name="product-quantity">
+							<input id="product-quantity" type="text" value="1" name="product-quantity" disabled>
 						</div>
 					</div>
                     
