@@ -22,7 +22,7 @@ items = []
         title: Faker::Creature::Cat.name,
         description: "Ce magnifique chachat est de race #{Faker::Creature::Cat.breed}. Il s'appelle #{Faker::Creature::Cat.name} et a #{Faker::Number.between(from: 1, to: 16)} ans. Tu ne le sais peut-être pas encore, mais il t'aime.",
         price: Faker::Number.between(from: 5, to: 1000),
-        image_url: Faker::Internet.url
+        image_url: "https://www.animalcare.ud.it/wp-content/uploads/2017/04/Webp.net-resizeimage-14-500x637.jpg"
     )
 end
 
