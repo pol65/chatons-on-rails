@@ -28,15 +28,17 @@ items = []
     )
 end
 
-#users = []
-#20.times do
-#    n = n+1
+#users = 
+#5.times do
+ #   n = n+1
 #    users << User.create(
+
 #        first_name: Faker::Name.first_name,
 #        last_name: Faker::Name.last_name,
 #        email: "chatononrails#{n}@yopmail.com",
 #
 #    )
 # end
+
 
 puts "********** Seed done. **********"
