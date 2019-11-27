@@ -7,4 +7,7 @@ class Item < ApplicationRecord
     has_many :jointcarditems 
     has_many :carts, through: :jointcarditems
 
+    has_many :joinorderitems
+    has_many :orders, through: :joinorderitems
+
 end
