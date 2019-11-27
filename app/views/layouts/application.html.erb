@@ -5,7 +5,7 @@
   <meta name="description" content="Aviato E-Commerce Template">
   
   <meta name="author" content="Themefisher.com">
-    <title>Chatonsonrails</title>
+    <title></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -57,20 +57,19 @@
 					<ul class="top-menu text-right list-inline ">
  					<% if user_signed_in? %>
     					<li>
-      					<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    					</li>
-    					<li>
      					<%= current_user.email %>
 						</li>
 						<li>
 						<%= link_to "Ton profil", edit_user_registration_path %>
 						</li>
 						<li>
-						<%= link_to "Edit email / password", edit_user_registration_path %>
+						<%= link_to "Editer profil", edit_user_registration_path %>
 						</li>
+						<li>
+      					<%= link_to "Déconnection", destroy_user_session_path, method: :delete %>
+    					</li>
 						<!-- Cart -->
-				
-	         			<li class="dropdown cart-nav dropdown-slide">
+						<li class="dropdown cart-nav dropdown-slide">
 	        	    		<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
 	         	   				<div class="dropdown-menu cart-dropdown">
 	            					<!-- Cart Item -->
@@ -100,29 +99,25 @@
                         				<span class="total-price">$1799.00</span>
                     				</div>
                     				<ul class="text-center cart-buttons">
-
                     					<li><a href="<%= carts_path%>" class="btn btn-small">Voir le panier</a></li>
 										<li><a href="" class="btn btn-small btn-solid-border">Paiement</a></li>
-										
-
                    					</ul>
                 				</div>
 	        				</li><!-- / Cart -->
   					<% else %>
     					<li>    
-      					<%= link_to "Sign in", new_user_session_path %>
+      					<%= link_to "Connection", new_user_session_path %>
 						</li>
 						<li>
-    					<%= link_to "Sign up", new_user_registration_path %>
+    					<%= link_to "Inscription", new_user_registration_path %>
     					</li>
 
 					<% end %>
-				
-	        			</ul><!-- / .nav .navbar-nav .navbar-right -->
-					</div>
+	        		</ul><!-- / .nav .navbar-nav .navbar-right -->
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 		<!-- End Top Header Bar -->
 	<%= yield %>
 	<footer class="footer section text-center">
