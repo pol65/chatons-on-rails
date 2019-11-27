@@ -9,5 +9,11 @@ class User < ApplicationRecord
     has_one :cart 
     has_many :orders
 
-  
+  after_create :generate_cart
+
+
+  def generate_cart
+      cartuser = User.last
+    Cart.create(user_id: cartuser.id)
+  end
 end
