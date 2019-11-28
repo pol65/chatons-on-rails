@@ -1,5 +1,27 @@
 class CartsController < ApplicationController
 before_action :require_login
+ 
+  
+  def index
+
+  end
+  
+
+  def show
+    @cart = @current_cart
+
+   
+  end
+ 
+ 
+
+  def destroy
+    
+    #@joint_card_item = JointCardItem.find(params[:id])
+    #@joint_card_item.destroy
+    redirect_to cart_path
+  end
+
   private
   def require_login
     unless authenticate_user!
@@ -8,20 +30,5 @@ before_action :require_login
     end
   end
   
-  def index
-
-  end
-  
-
-  def show
-    
-
-    @cart = @current_cart
-    
-  end
-  
 
 end
-#cart = @current_cart
-#JointCardItem.cart
-#@item= JointCardItem.find_by(id)

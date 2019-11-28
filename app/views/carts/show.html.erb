@@ -38,12 +38,16 @@
                           <%= cart_item.item.title %></a>
                         </div>
                       </td>
-                      <td class="">$200.00</td>
+                      <td class=""><%= cart_item.item.price %> </td>
                       <td class="">
-                        <a class="product-remove" href="">Remove</a>
+                        <a href="<%= @joint_card_items %>" class="btn btn-danger" data-confirm="Êtes-vous sûr ?" data-method="DELETE">Supprimer</a>
                       </td>
+                        
                     </tr>
-                    <% end %>
+                   
+                    
+                     <% end %>
+                     <p>Prix du panier <%= @cart.total %></p>
                   </tbody>
                 </table>
                 <a href="checkout.html" class="btn btn-main pull-right">Checkout</a>
