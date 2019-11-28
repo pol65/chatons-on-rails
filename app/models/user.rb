@@ -9,5 +9,15 @@ class User < ApplicationRecord
     has_one :cart 
     has_many :orders
 
+  after_create :cart_create
+
+# A améliorer et vite !
+
+after_create :cart_create
   
+def cart_create
+    Cart.create( user_id: self.id)
+  end
+
+
 end
