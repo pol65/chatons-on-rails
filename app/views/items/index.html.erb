@@ -32,11 +32,15 @@
 				<div class="product-item">
 					<div class="product-thumb">
 
+						 <img src="<%= item.image_url %>"> 
+
+
+
 
 						<div class="preview-meta">
 							<ul>
 								<li>
-									<a href=""><i class="tf-ion-android-cart">Ajouter au panier</i></a>
+									<%= button_to "Add to cart", item_joint_card_items_path(item.id), {method: :post, :class => "btn btn-lg btn-primary"} %>
 								</li>
 							</ul>
                       	</div>
