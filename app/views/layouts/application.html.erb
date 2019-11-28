@@ -63,7 +63,7 @@
      					<%= current_user.email %>
 						</li>y 
 						<li> 
-						<%= link_to "Ton profil", edit_user_registration_path %>
+						<%= link_to "Ton profil", user_path(current_user.id)%>
 						</li>
 						<li>
 						<%= link_to "Edit ton profil", edit_user_registration_path %>
