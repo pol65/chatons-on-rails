@@ -9,18 +9,13 @@ before_action :require_login
   end
   
   def index
-  end
-  def show
     
   end
+  
 
-  def update
-    add_item
+  def show
+  
   end
   
-  def add_item
-    JointCardItem.create(cart_id: self.id, item_id: self.id)
- 
-    redirect_to cart_path
-   end
+
 end

@@ -47,9 +47,9 @@
 					</div>
                     
                     <!--A MODIFIER REF DE MISE EN PANIER -->  
-
-
-					<%= link_to "Add to Cart", new_jointscardsitem_path %> 
+					
+							
+					<%= button_to "Add to cart", item_joint_card_items_path(@item.id), {method: :post, :class => "btn btn-lg btn-primary"} %>
 				</div>
 			</div>
 		</div>
