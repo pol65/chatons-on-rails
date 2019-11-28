@@ -9,13 +9,18 @@ before_action :require_login
   end
   
   def index
-    
+
+
   end
   
 
   def show
-  
+    @jointable = JointCardItem.all
+    @join_table_cart_items = JointCardItems.where(cart: @current_cart)
   end
   
 
 end
+#cart = @current_cart
+#JointCardItem.cart
+#@item= JointCardItem.find_by(id)
