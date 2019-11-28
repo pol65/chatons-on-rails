@@ -20,7 +20,7 @@ class JointCardItemsController < ApplicationController
             @joint_card_item.cart = current_cart
             @joint_card_item.item = chosen_item
             if @joint_card_item.save
-              redirect_to carts_path
+              redirect_to cart_path(current_cart)
             else
               redirect_to root_path
             end
