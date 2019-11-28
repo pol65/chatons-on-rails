@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :joint_card_items
   end
   resources :carts
-  
+  resources :devise
+  resources :user
 end
+

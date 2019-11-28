@@ -1,0 +1,28 @@
+<section class="user-dashboard page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="dashboard-wrapper dashboard-user-profile">
+          <div class="media">
+            <div class="pull-left text-center" href="#">
+              <img class="media-object user-img" src="https://i.pinimg.com/474x/2a/cb/22/2acb220cc8371146f441051e08791a72.jpg" alt="Image">
+            </div>
+            <div class="media-body">
+              <ul class="user-profile-list">
+                <li><span>First-Name:</span><%= @user.first_name %></li>
+                <li><span>Last-name:</span><%= @user.last_name %></li>
+                <li><span>Email:</span><%= @user.email %></li>
+              </ul>
+            </div>
+		  <%= link_to edit_user_registration_path do %>
+				<button type="button" class="btn btn-main text-center mt-4">Editer votre compte </button>
+			<% end %>
+                
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
