@@ -57,21 +57,21 @@
 					<ul class="top-menu text-right list-inline ">
  					<% if user_signed_in? %>
     					<li>
-      					<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      					<%= link_to "Déconnection", destroy_user_session_path, method: :delete %>
     					</li>
     					<li>
      					<%= current_user.email %>
-						</li>
-						<li>
+						</li>y 
+						<li> 
 						<%= link_to "Ton profil", edit_user_registration_path %>
 						</li>
 						<li>
-						<%= link_to "Edit email / password", edit_user_registration_path %>
+						<%= link_to "Edit ton profil", edit_user_registration_path %>
 						</li>
 						<!-- Cart -->
 				
 	         			<li class="dropdown cart-nav dropdown-slide">
-	        	    		<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
+	        	    		<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Panier</a>
 	         	   				<div class="dropdown-menu cart-dropdown">
 	            					<!-- Cart Item -->
 	            					<div class="media">
