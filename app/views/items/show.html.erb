@@ -4,112 +4,10 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
 <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Aviato E-Commerce Template">
-  
-  <meta name="author" content="Themefisher.com">
-
-  <title>Aviato | E-commerce template</title>
-
-  <!-- Mobile Specific Meta-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
-  
-  <!-- Themefisher Icon font -->
-  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  
-  <!-- animate.css -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  
-  <!-- Revolution Slider -->
-  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css">
-
-  <!-- REVOLUTION STYLE SHEETS -->
-  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/settings.css">
-  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/layers.css">
-  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/navigation.css">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-
+<head>  <title>Aviato | E-commerce template</title>
 </head>
 
 <body id="body">
-<!-- Start Top Header Bar -->
-<section class="top-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-xs-12 col-sm-4">
-				<div class="contact-number">
-					<i class="tf-ion-ios-telephone"></i>
-					<span>0699109398</span>
-				</div>
-			</div>
-			<div class="col-md-4 col-xs-12 col-sm-4">
-				<!-- Site Logo -->
-				<div class="logo text-center">
-					<h1 href="<%= root_path %>"> BicraveDeChatons.com </h1>
-				</div>
-			</div>
-			<div class="col-md-4 col-xs-12 col-sm-4">
-			<!-- Cart -->
-			<ul class="top-menu text-right list-inline">
-	          <li class="dropdown cart-nav dropdown-slide">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
-	            <div class="dropdown-menu cart-dropdown">
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart-1.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-	            	</div><!-- / Cart Item -->
-	            	<!-- Cart Item -->
-	            	<div class="media">
-	            		<a class="pull-left" href="#">
-	            			<img  class="media-object" src="images/shop/cart-1.jpg" alt="image" />
-	            		</a>
-	            		<div class="media-body">
-	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
-	            			<div class="cart-price">
-                              <span>1 x</span>
-                              <span>1250.00</span>
-                            </div>
-	            		</div>
-                        <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-	            	</div><!-- / Cart Item -->
-	            	
-	            	<div class="cart-summary">
-                        <span>Total</span>
-                        <span class="total-price">$1799.00</span>
-                    </div>
-                    <ul class="text-center cart-buttons">
-                    	<li><a href="" class="btn btn-small">View Cart</a></li>
-                    	<li><a href="" class="btn btn-small btn-solid-border">Checkout</a></li>
-                    </ul>
-                </div>
-
-	          </li><!-- / Cart -->
-
-	        </ul><!-- / .nav .navbar-nav .navbar-right -->
-			</div>
-		</div>
-	</div>
-</section><!-- End Top Header Bar -->
-
 <section class="single-product">
 	<div class="container">
 		<div class="row mt-20">
@@ -120,7 +18,7 @@
 							<!-- me art lab slider -->
 							<div class='carousel-inner '>
 								<div class='item active'>
-                                <a> <%= @item.image_url %> </a>
+                                <img class="img-responsive" src="<%= @item.image_url %>" alt="product-img">
 								</div>
 								
 							</div>
@@ -144,7 +42,7 @@
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">
-							<input id="product-quantity" type="text" value="1" name="product-quantity">
+							<input id="product-quantity" type="text" value="1" name="product-quantity" disabled>
 						</div>
 					</div>
                     
@@ -166,82 +64,24 @@
 				<h2>Related Products</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-5.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
+
+		<% @items.each do |item|%>
+			<div class="col">
+				<div class="col-md-3">
+					<div class="product-item">
+						<div class="product-thumb">
+							<img src="<%= item.image_url %>">
+						</div>
+						<div class="product-content">
+							<h4><a href="<%= item_path(item.id)%>"><%= item.title%></a></h4>
+							<p class="price"><%= item.price%>0 €</p>
+							
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-2.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Strayhorn SP</a></h4>
-						<p class="price">$230</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="product-item">
-					<div class="product-thumb">
-						<img class="img-responsive" src="images/shop/products/product-3.jpg" alt="product-img" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<a href=""><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Bradley Mid</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
+		<% end %>
+		
 	</div>
 </section>
 
@@ -276,92 +116,6 @@
     	</div>
   	</div>
 </div>
-<footer class="footer section text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<ul class="social-media">
-					<li>
-						<a href="">
-							<i class="tf-ion-social-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<i class="tf-ion-social-instagram"></i>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<i class="tf-ion-social-twitter"></i>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<i class="tf-ion-social-pinterest"></i>
-						</a>
-					</li>
-				</ul>
-				<ul class="footer-menu">
-					<li>
-						<a href="">CONTACT</a>
-					</li>
-					<li>
-						<a href="">SHIPPING</a>
-					</li>
-					<li>
-						<a href="">TERMS OF SERVICE</a>
-					</li>
-					<li>
-						<a href="">PRIVACY POLICY</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-    <!-- 
-    Essential Scripts
-    =====================================-->
-    
-    <!-- Main jQuery -->
-    <script src="https://code.jquery.com/jquery-git.min.js"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Bootstrap Touchpin -->
-    <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
-    <!-- Instagram Feed Js -->
-    <script src="plugins/instafeed-js/instafeed.min.js"></script>
-    <!-- Video Lightbox Plugin -->
-    <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
-    <!-- Count Down Js -->
-    <script src="plugins/count-down/jquery.countdown.min.js"></script>
-    
-    <!-- Revolution Slider -->
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    
-    <!-- Revolution Slider -->
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script type="text/javascript" src="plugins/revolution-slider/assets/warning.js"></script>  
-
-
-
-    <!-- Custom js -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBItRd4sQ_aXlQG_fvEzsxvuYyaWnJKETk&callback=initMap"></script>
-
-    <script src="js/script.js"></script>
-    
-
 
   </body>
   </html>

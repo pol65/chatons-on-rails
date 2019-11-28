@@ -3,4 +3,11 @@ class Item < ApplicationRecord
     validates :title, length: { in: 5..90 }
     validates :description, length: { in: 20..500 }
     validates :price, numericality: { greater_than: 0 }
+
+    has_many :jointcarditems 
+    has_many :carts, through: :jointcarditems
+
+    has_many :joinorderitems
+    has_many :orders, through: :joinorderitems
+
 end
